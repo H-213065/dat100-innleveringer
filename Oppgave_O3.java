@@ -5,6 +5,8 @@ import static java.lang.Integer.*;
 
 public class Oppgave_O3 {
 
+	// Fakultetskalkulasjon
+
 	public static void main(String[] args) {
 		// Hente inn verdi for n
 		String tallTxt = showInputDialog("Skriv inn verdien for n:");
