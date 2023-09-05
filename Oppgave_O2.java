@@ -8,13 +8,13 @@ public class Oppgave_O2 {
 	public static void main(String[] args) {
 		
 		// Initialisering
-		int antallStudenter = 10;
-		int[] tallKarakterer = {0,40,50,60,80,90};
-		String[] bokstavKarakterer = {"F","E","D","C","B","A"};
-		int antallKarakterTrinn = tallKarakterer.length;
+		final int ANT_STUDENTER = 10;
+		final int[] TALL_KARAKTERER = {0,40,50,60,80,90};
+		final String[] BOKSTAV_KARAKTERER = {"F","E","D","C","B","A"};
+		final int ANT_KARAKTER_TRINN = TALL_KARAKTERER.length;
 		
 		// Hente input for hver student.
-		for (int studentNr = 0;studentNr < antallStudenter;studentNr++) {
+		for (int studentNr = 0;studentNr < ANT_STUDENTER;studentNr++) {
 			
 			// Initiell verdi er at input IKKE blir godkjent.
 			int tallKarakter = -1;
@@ -55,16 +55,16 @@ public class Oppgave_O2 {
 			}	
 	
 			
-			// Går gjennom baklengs tallkarakterer til vi ev. får treff.
+			// Går gjennom baklengs TALL_KARAKTERER til vi ev. får treff.
 			
-			for (int i = antallKarakterTrinn - 1;i >= 0;i--) {
+			for (int i = ANT_KARAKTER_TRINN - 1;i >= 0;i--) {
 				// Inntastet tall sjekkes mot liste.
-				int tall = tallKarakterer[i];
-				String bokstav = bokstavKarakterer[i];
+				int tall = TALL_KARAKTERER[i];
+				String bokstav = BOKSTAV_KARAKTERER[i];
 				
 				if (tallKarakter >= tall) {
 	
-					String utregnetBokstav = bokstavKarakterer[i];
+					String utregnetBokstav = BOKSTAV_KARAKTERER[i];
 					
 					System.out.println("Student nr. " + (studentNr + 1) + " får, med en poengsum på " + tallKarakter + ", karakteren " + utregnetBokstav);
 					
