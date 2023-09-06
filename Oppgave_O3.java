@@ -17,18 +17,29 @@ public class Oppgave_O3 {
 			return;
 		}
 		
-		// Setter n
-		int n = parseInt(tallTxt);
-		
-		if ((n > 0) == true) {
-			long fakultet = 1;
-            for (int i = 1; i <= n; i++) {
-            	fakultet *= i;
-            }
-            System.out.println(n + "! = " + fakultet);
-		}else{
-			showMessageDialog(null,"Programmet lukkes, fordi du ikke oppgav et tall høyere enn null.");
-			return;
+		try {	
+			// Setter n
+			int n = parseInt(tallTxt);
+			
+			if ((n > 0) == true) {
+				long fakultet = 1;
+	            for (int i = 1; i <= n; i++) {
+	            	fakultet *= i;
+	            }
+	            System.out.println(n + "! = " + fakultet);
+			}else{
+				showMessageDialog(null,"Programmet lukkes, fordi du ikke oppgav et tall høyere enn null.");
+				return;
+			}
+			
+		}catch(Exception e) {
+			
+			// Inntastede data sannsynligvis bogus.
+			System.out.println("Utregning ikke mulig: " + e);
+			showMessageDialog(null,
+			    "Kunne ikke regne ut. Du må starte appen på nytt.",
+			    "Utilstrekkelige data",
+			    WARNING_MESSAGE);
 		}
 
 	}
