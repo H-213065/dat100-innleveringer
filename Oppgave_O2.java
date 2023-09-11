@@ -68,7 +68,7 @@ public class Oppgave_O2 {
 					
 					System.out.println("Student nr. " + (studentNr + 1) + " får, med en poengsum på " + tallKarakter + ", karakteren " + utregnetBokstav);
 					
-					// Riktig karakter ble funnet og i settes til -1 for å stoppe sløyfen.
+					// Riktig karakter ble funnet og i sin verdi settes til verdi utenfor spenn for å stoppe sløyfen.
 					i = -1;
 					
 				}	
