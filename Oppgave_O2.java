@@ -60,7 +60,6 @@ public class Oppgave_O2 {
 			for (int i = ANT_KARAKTER_TRINN - 1;i >= 0;i--) {
 				// Inntastet tall sjekkes mot liste.
 				int tall = TALL_KARAKTERER[i];
-				String bokstav = BOKSTAV_KARAKTERER[i];
 				
 				if (tallKarakter >= tall) {
 	
